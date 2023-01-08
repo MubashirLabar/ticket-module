@@ -1,0 +1,20 @@
+// base
+@import "./base/variables.scss";
+@import "./base/media.scss";
+@import "./base/colors.scss";
+@import "./base/functions.scss";
+@import "./base/global.scss";
+@import "./base/utils.scss";
+
+// components
+@import "./components/splash.scss";
+@import "./components/loader.scss";
+
+// views
+@import "./views/ticket-booking.scss";
+@import "./views/order-confirmation.scss";
+@import "./views/booking-confirmation.scss";
+
+// Modals
+@import "./modals/tikkiePaymentModal.scss";
+@import "./modals/optConfirmModal.scss";

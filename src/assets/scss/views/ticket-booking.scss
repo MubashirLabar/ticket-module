@@ -1,0 +1,985 @@
+.ticket-booking {
+  padding: 54px 0px;
+  position: relative;
+  @include media("<=sm") {
+    padding: 30px 20px;
+  }
+  .wrapper {
+    width: 570px;
+    margin: 0px auto;
+    position: relative;
+    @include media("<=sm") {
+      width: 100%;
+    }
+    .page-hdr {
+      width: 100%;
+      display: flex;
+      flex-direction: center;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      @include media("<=sm") {
+        margin-bottom: 30px;
+      }
+      .back-btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $color-primary;
+        @include media("<=sm") {
+          left: 0px;
+        }
+        svg {
+          height: 22px;
+          width: 22px;
+          display: flex;
+          margin-right: 5px;
+        }
+        .lbl {
+          @include media("<=sm") {
+            display: none;
+          }
+        }
+      }
+      .title {
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 600;
+        color: $color-black;
+        letter-spacing: 0.3px;
+        span {
+          font-weight: 400;
+          opacity: 0.5;
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      .section {
+        background: $color-white;
+        box-shadow: $shadow-md;
+        border-radius: 12px;
+        margin-bottom: 18px;
+      }
+      .sub-total-blk {
+        display: flex;
+        align-items: center;
+        background: $color-white;
+        box-shadow: $shadow-md;
+        border-radius: 12px;
+        padding: 22px 22px;
+        @include media("<=sm") {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .meta {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          @include media("<=sm") {
+            margin-bottom: 10px;
+          }
+          .title {
+            font-size: 14px;
+            color: $color-black;
+            margin-bottom: 6px;
+          }
+          .price {
+            font-size: 22px;
+            color: $color-black;
+            font-weight: 600;
+          }
+        }
+        .rit {
+          display: flex;
+          align-items: center;
+          @include media("<=sm") {
+            width: 100%;
+          }
+          .next-btn {
+            padding: 6px 18px;
+            font-size: 18px;
+            min-width: 90px;
+            display: flex;
+            align-items: center;
+            span {
+              display: flex;
+              align-items: center;
+            }
+            @include media("<=sm") {
+              width: 100%;
+              font-size: 18px;
+            }
+            svg {
+              height: 22px;
+              width: 22px;
+              margin-left: 5px;
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section {
+    .block {
+      width: 100%;
+      padding: 22px 22px;
+      &:not(:last-child) {
+        border-bottom: 1px solid $border-color;
+      }
+      &.info {
+        display: flex;
+        flex-direction: column;
+        .sub-blk {
+          display: flex;
+          align-items: flex-start;
+          @include media("<=phone") {
+            flex-direction: column;
+          }
+        }
+        .image {
+          @include bg-image(10px);
+          height: 90px;
+          width: 100px;
+          min-width: 130px;
+          margin-right: 12px;
+          @include media("<=phone") {
+            width: 100%;
+            margin-right: 0px;
+            height: 120px;
+            margin-bottom: 15px;
+          }
+        }
+        .meta {
+          @include media("<=phone") {
+            width: 100%;
+          }
+          .title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: $color-black;
+            @include media("<=sm") {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+            @include media("<=phone") {
+              margin-bottom: 15px;
+            }
+          }
+        }
+        .host {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          @include media("<=phone") {
+            margin-bottom: 15px;
+          }
+          .dp {
+            @include bg-image(50%);
+            height: 40px;
+            width: 40px;
+            margin-right: 12px;
+            @include media("<=phone") {
+              height: 32px;
+              width: 32px;
+            }
+          }
+          .host-meta {
+            display: flex;
+            flex-direction: column;
+            .by {
+              font-size: 13px;
+              color: rgba($color-black, 0.6);
+              margin-bottom: 5px;
+            }
+            .user-name {
+              font-size: 14px;
+              color: $color-purple;
+            }
+          }
+        }
+        .item {
+          display: flex;
+          align-items: flex-start;
+          &:not(:last-child) {
+            margin-bottom: 30px;
+            @include media("<=phone") {
+              margin-bottom: 15px;
+            }
+          }
+          .icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: $color-grey-4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: $color-primary;
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+          }
+          .meta {
+            display: flex;
+            flex-direction: column;
+            .lbl {
+              font-size: 12px;
+              color: rgba($color-black, 0.6);
+              margin-bottom: 2px;
+            }
+            .value {
+              font-size: 14px;
+              font-weight: 500;
+              color: $color-black;
+              margin-bottom: 5px;
+            }
+            .text {
+              font-size: 14px;
+              color: rgba($color-black, 0.6);
+            }
+          }
+        }
+        .about-blk {
+          margin-top: 18px;
+          .label {
+            font-weight: 600;
+            font-size: 20px;
+            color: $color-black-900;
+            line-height: 120%;
+            margin-bottom: 12px;
+          }
+          .description {
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: 0.2px;
+            span {
+              cursor: pointer;
+              font-weight: 500;
+              color: $color-secondary-500;
+            }
+          }
+        }
+      }
+      &.details {
+        .item {
+          display: flex;
+          align-items: flex-start;
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+          .icon {
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            background: $color-grey-4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: $color-primary;
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+          }
+          .meta {
+            display: flex;
+            flex-direction: column;
+            .lbl {
+              font-size: 12px;
+              color: rgba($color-black, 0.6);
+              margin-bottom: 2px;
+            }
+            .value {
+              font-size: 14px;
+              font-weight: 500;
+              color: $color-black;
+              margin-bottom: 5px;
+            }
+            .text {
+              font-size: 14px;
+              color: rgba($color-black, 0.6);
+            }
+          }
+        }
+        .calender-item {
+          flex-direction: column;
+          .row-blk {
+            display: flex;
+            width: 100%;
+          }
+          .icon-calender {
+            opacity: 0;
+            visibility: hidden;
+            @include media("<=sm") {
+              display: none;
+            }
+          }
+        }
+        .calender-blk {
+          position: relative;
+          max-width: 304px;
+          cursor: pointer;
+          @include media("<=sm") {
+            max-width: 100%;
+            width: 100%;
+          }
+          .calender-btn {
+            width: 100%;
+            height: 36px;
+            border-radius: 10px;
+            color: $color-white;
+            font-size: 14px;
+            font-weight: 600;
+            background: $color-primary;
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5px;
+            &:hover {
+              opacity: 0.9;
+            }
+            svg {
+              height: 18px;
+              width: 18px;
+              margin-right: 10px;
+            }
+          }
+          .react-datepicker__input-container {
+            display: none;
+          }
+          .react-datepicker-popper {
+            position: initial !important;
+            transform: translate3d(0px, 0px, 0px) !important;
+          }
+        }
+      }
+      &.ticket-types {
+        padding: 0px 22px;
+        .item {
+          display: flex;
+          align-items: center;
+          padding: 22px 0px;
+          &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+          }
+          .lit {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            .meta {
+              display: flex;
+              flex-direction: column;
+              .title {
+                font-size: 16px;
+                font-weight: 700;
+                color: $color-black;
+                margin-bottom: 7px;
+                @include media("<=sm") {
+                  font-size: 15px;
+                }
+              }
+              .text {
+                font-size: 13px;
+                color: rgba($color-black, 0.5);
+              }
+            }
+          }
+          .rit {
+            display: flex;
+            align-items: center;
+            @include media("<=sm") {
+              flex-direction: column-reverse;
+              align-items: flex-end;
+            }
+            .actions {
+              display: flex;
+              align-items: center;
+              .action {
+                height: 24px;
+                width: 24px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $color-white;
+                background: $color-primary;
+                @include media("<=sm") {
+                  height: 22px;
+                  width: 22px;
+                }
+                svg {
+                  height: 16px;
+                  width: 16px;
+                }
+                &:disabled {
+                  background: rgba($color-black, 0.15);
+                  color: rgba($color-black, 0.5);
+                  cursor: no-drop;
+                }
+              }
+              .price {
+                margin: 0px 10px;
+                min-width: 38px;
+                text-align: center;
+                font-size: 20px;
+                color: $color-black;
+                font-weight: 700;
+                @include media("<=sm") {
+                  margin: 0px 8px;
+                  min-width: 26px;
+                  font-size: 18px;
+                }
+              }
+            }
+            .meta {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              align-items: flex-end;
+              margin-left: 20px;
+              min-width: 100px;
+              @include media("<=sm") {
+                margin-right: 0px;
+                margin-bottom: 7px;
+              }
+              .text {
+                font-size: 13px;
+                color: rgba($color-black, 0.5);
+                margin-bottom: 2px;
+              }
+              .sub-total {
+                font-size: 22px;
+                font-weight: 600;
+                color: rgba($color-black, 0.15);
+                @include media("<=sm") {
+                  font-size: 18px;
+                }
+                &.active {
+                  color: $color-black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.promotional {
+      padding: 22px 22px;
+      display: flex;
+      align-items: center;
+      .promo-btn {
+        color: $color-primary;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include media("<=sm") {
+          font-size: 15px;
+        }
+        svg {
+          height: 22px;
+          width: 22px;
+          margin-right: 16px;
+          display: flex;
+        }
+      }
+      .promo-field {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: 2px solid $border-color-1;
+        padding: 0px 16px;
+        border-radius: 12px;
+        height: 60px;
+        @include anim;
+        &:focus-within {
+          border-color: $color-primary;
+        }
+        .icon {
+          svg {
+            height: 22px;
+            width: 22px;
+            display: flex;
+            color: $color-primary;
+          }
+        }
+        .input {
+          height: 100%;
+          width: 100%;
+          font-size: 18px;
+          font-weight: 600;
+          color: $color-black;
+          padding: 10px 15px;
+          &::placeholder {
+            color: rgba($color-black, 0.15);
+          }
+          @include media("<=sm") {
+            font-size: 16px;
+          }
+        }
+        .add-btn {
+          font-size: 15px;
+          font-weight: 500;
+          min-width: 80px;
+          height: 38px;
+          @include media("<=sm") {
+            min-width: 60px;
+            height: 33px;
+          }
+        }
+      }
+    }
+    &.terms {
+      display: flex;
+      align-items: center;
+      padding: 22px 22px;
+      .checkbox {
+        margin-right: 18px;
+      }
+      .lbl {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-black;
+        @include media("<=sm") {
+          font-size: 15px;
+        }
+        .link {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+/* Step One */
+.ticket-booking_step-one {
+  width: 100%;
+}
+
+/* Step 2 */
+.ticket-booking_step-two {
+  .section {
+    .block {
+      padding: 25px 22px;
+      &.personal-info {
+        .field-control {
+          .react-tel-input {
+            width: 100%;
+            .form-control {
+              display: flex;
+              align-items: center;
+              padding: 10px 0px 10px 80px;
+              font-size: 16px;
+              font-weight: 600;
+              color: $color-black;
+              border: 2px solid $border-color-1;
+              height: 48px;
+              border-radius: 10px;
+              @include anim;
+              width: 100%;
+              &:focus-within {
+                border-color: $color-primary;
+              }
+            }
+            .selected-flag {
+              outline: none;
+              position: relative;
+              width: 100%;
+              height: 100%;
+              padding: 0 0 0 18px;
+            }
+            .flag-dropdown {
+              border: none;
+              background: $color-bg-grey-1;
+              width: 70px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 8px 0px 0px 8px;
+              top: 2px;
+              bottom: 2px;
+              left: 2px;
+              .selected-flag {
+                &:hover {
+                  background: transparent;
+                }
+                .arrow {
+                  margin-top: -2px;
+                  left: 24px;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+                  border-top: 4px solid #000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Step 3 */
+.ticket-booking_step-three {
+  .section {
+    .block {
+      padding: 22px 22px;
+      @include media("<=sm") {
+        padding: 22px 20px;
+      }
+      &.info {
+        display: flex;
+        align-items: flex-start;
+        .image {
+          @include bg-image(10px);
+          height: 90px;
+          width: 100px;
+          min-width: 130px;
+          margin-right: 12px;
+        }
+        .meta {
+          .title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: $color-black;
+            @include media("<=sm") {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+          }
+        }
+        .host {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          .dp {
+            @include bg-image(50%);
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+          }
+          .host-meta {
+            display: flex;
+            flex-direction: column;
+            .by {
+              font-size: 13px;
+              color: rgba($color-black, 0.6);
+              margin-bottom: 5px;
+            }
+            .user-name {
+              font-size: 14px;
+              color: $color-purple;
+            }
+          }
+        }
+        .item {
+          display: flex;
+          align-items: flex-start;
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+          .icon {
+            width: 40px;
+            height: 40px;
+            background: $color-grey-4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: $color-primary;
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+          }
+          .meta {
+            display: flex;
+            flex-direction: column;
+            .lbl {
+              font-size: 12px;
+              color: rgba($color-black, 0.6);
+              margin-bottom: 2px;
+            }
+            .value {
+              font-size: 14px;
+              font-weight: 500;
+              color: $color-black;
+              margin-bottom: 5px;
+            }
+            .text {
+              font-size: 14px;
+              color: rgba($color-black, 0.6);
+            }
+          }
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        .lit {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          .meta {
+            display: flex;
+            flex-direction: column;
+            .title {
+              font-size: 16px;
+              font-weight: 600;
+              color: $color-black;
+              margin-bottom: 5px;
+            }
+            .text {
+              color: rgba($color-black, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+  .payment-methods {
+    padding: 30px 22px;
+    .label {
+      font-size: 15px;
+      color: $color-black;
+      margin-bottom: 30px;
+    }
+    .methods-list {
+      .item {
+        box-shadow: 0px 4px 60px rgba(4, 6, 15, 0.05);
+        border-radius: 20px;
+        background: $color-white;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-bottom: 22px;
+        }
+        .lit {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          .icon {
+            height: 36px;
+            width: 36px;
+            margin-right: 16px;
+          }
+          .lbl {
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-black;
+            margin-bottom: 3px;
+          }
+          .text {
+            font-size: 14px;
+            color: rgba($color-black, 0.5);
+          }
+        }
+      }
+    }
+  }
+  .tikkie-new-tab-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 20px 50px 20px;
+    .icon {
+      height: 42px;
+      width: 42px;
+    }
+    .label {
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-black;
+      max-width: 340px;
+      text-align: center;
+      line-height: 1.35;
+      margin: 30px 0px;
+      @include media("<=phone") {
+        max-width: 100%;
+      }
+    }
+    .open-tab-btn {
+      font-weight: 16px;
+      font-weight: 700;
+      padding: 8px 24px;
+      color: $color-white;
+      @include media("<=phone") {
+        width: fit-content;
+      }
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .complete-payment-msg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    text-align: center;
+    @include media("<=phone") {
+      padding: 40px 20px;
+    }
+    .loading {
+      margin-bottom: 22px;
+    }
+    .tit {
+      font-size: 16px;
+      color: $color-black;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+  }
+}
+
+.phone-verification {
+  .section {
+    padding: 30px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .block {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      .meta {
+        margin-bottom: 40px;
+        .title {
+          font-size: 20px;
+          font-weight: 600;
+          color: $color-black;
+          margin-bottom: 7px;
+        }
+        .text {
+          font-size: 14px;
+          color: rgba($color-black, 0.6);
+          span {
+            color: $color-primary;
+          }
+        }
+      }
+      .styles_react-code-input-container__tpiKG {
+        width: 100% !important;
+        .styles_react-code-input__CRulA {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 40px;
+        }
+        input {
+          height: 50px;
+          width: 50px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          border: 1px solid $border-color;
+          font-size: 22px;
+          font-weight: 600;
+          color: $color-black;
+          font-family: "Inter", sans-serif;
+          &:focus {
+            border-color: #32282f;
+          }
+        }
+      }
+      .resent-blk {
+        font-size: 14px;
+        color: rgba($color-black, 0.6);
+        margin-bottom: 5px;
+        span {
+          font-size: 15px;
+          color: $color-purple;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+      .error-msg {
+        font-size: 14px;
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.phone-verified {
+  .section {
+    padding: 40px 22px 40px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .phone {
+      font-size: 14px;
+      font-weight: 500;
+      color: $color-primary;
+      margin-bottom: 5px;
+    }
+    .title {
+      font-size: 22px;
+      color: $color-black;
+      font-weight: 600;
+      margin-bottom: 50px;
+    }
+    .success-icon {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $color-primary;
+      color: $color-white;
+      border-radius: 50%;
+      svg {
+        height: 36px;
+        width: 36px;
+      }
+    }
+  }
+}
+
+/* Ticket view loading */
+.ticket-view-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

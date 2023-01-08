@@ -1,0 +1,265 @@
+.order-confirmation {
+  padding: 0px 0px;
+  .section {
+    .block {
+      padding: 25px 22px;
+      &.info {
+        display: flex;
+        align-items: flex-start;
+        .image {
+          @include bg-image(10px);
+          height: 90px;
+          width: 100px;
+          min-width: 130px;
+          margin-right: 12px;
+        }
+        .meta {
+          .title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: $color-black;
+            @include media("<=sm") {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+          }
+        }
+        .host {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          .dp {
+            @include bg-image(50%);
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+          }
+          .host-meta {
+            display: flex;
+            flex-direction: column;
+            .by {
+              font-size: 13px;
+              color: rgba($color-black, 0.6);
+              margin-bottom: 5px;
+            }
+            .user-name {
+              font-size: 14px;
+              color: $color-purple;
+            }
+          }
+        }
+        .item {
+          display: flex;
+          align-items: flex-start;
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+          .icon {
+            width: 40px;
+            height: 40px;
+            background: $color-grey-4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: $color-primary;
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+          }
+          .meta {
+            display: flex;
+            flex-direction: column;
+            .lbl {
+              font-size: 12px;
+              color: rgba($color-black, 0.6);
+              margin-bottom: 2px;
+            }
+            .value {
+              font-size: 14px;
+              font-weight: 500;
+              color: $color-black;
+              margin-bottom: 5px;
+            }
+            .text {
+              font-size: 14px;
+              color: rgba($color-black, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+  .success-blk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 22px 35px 22px;
+    .vector {
+      height: 75px;
+      margin-bottom: 20px;
+    }
+    .label {
+      font-size: 20px;
+      color: $color-black;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .text {
+      font-size: 14px;
+      color: $color-black;
+      margin-bottom: 5px;
+    }
+    .address {
+      font-size: 16px;
+      color: $color-purple;
+      font-weight: 600;
+    }
+  }
+  .payment-due {
+    padding: 30px 22px;
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      color: $color-primary;
+      margin-bottom: 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media("<=sm") {
+        font-size: 16px;
+      }
+      .icon {
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        background: $color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+        @include media("<=sm") {
+          height: 22px;
+          width: 22px;
+        }
+        svg {
+          height: 22px;
+          width: 22px;
+          color: $color-white;
+          @include media("<=sm") {
+            height: 18px;
+            width: 18px;
+          }
+        }
+      }
+    }
+    .ticks {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 40px;
+      .item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        .lit {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          .lbl {
+            font-size: 15px;
+            color: $color-black;
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+          .price {
+            font-size: 13px;
+            color: rgba($color-black, 0.6);
+          }
+        }
+        .rit {
+          display: flex;
+          flex-direction: column;
+          .qty {
+            font-size: 13px;
+            color: rgba($color-black, 0.6);
+            margin-bottom: 3px;
+          }
+          .price {
+            font-size: 15px;
+            color: $color-black;
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+    .total {
+      background: #f4f4f4;
+      border-radius: 10px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      margin-bottom: 30px;
+      @include media("<=phone") {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 14px 16px;
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 16px;
+        color: $color-black;
+        @include media("<=sm") {
+          font-size: 14px;
+        }
+        @include media("<=phone") {
+          margin-bottom: 7px;
+        }
+      }
+      .price {
+        font-size: 18px;
+        font-weight: 600;
+        color: $color-black;
+      }
+    }
+    .notice {
+      font-size: 15px;
+      color: $color-black;
+      text-align: center;
+      padding: 0px 30px;
+    }
+  }
+  .share-blk {
+    padding: 40px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button-primary {
+      width: 280px;
+      height: 40px;
+      background: $color-purple;
+      position: relative;
+      @include media("<=sm") {
+        width: 100%;
+      }
+      svg {
+        height: 22px;
+        width: 22px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

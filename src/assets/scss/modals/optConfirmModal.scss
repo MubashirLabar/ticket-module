@@ -1,0 +1,67 @@
+.opt-confirm-modal {
+  background: $color-white;
+  width: 397px;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px 32px;
+  border-radius: 52px;
+  @include media("<=phone") {
+    width: 100%;
+    padding: 15px 22px;
+    min-height: 580px;
+    border-radius: 46px;
+  }
+  .vector {
+    height: 198px;
+    @include media("<=phone") {
+      height: 180px;
+    }
+  }
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #f75555;
+    margin-bottom: 16px;
+    @include media("<=phone") {
+      font-size: 22px;
+      line-height: 100%;
+    }
+  }
+  .text {
+    font-size: 16px;
+    color: $color-black-900;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    margin-bottom: 32px;
+    @include media("<=phone") {
+      font-size: 15px;
+    }
+  }
+  .actions {
+    width: 100%;
+    .action {
+      color: $color-white;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      background: $color-primary;
+      border-radius: 20px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      &.transparent {
+        background: $color-secondary-100;
+        color: $color-secondary-500;
+      }
+    }
+  }
+}
